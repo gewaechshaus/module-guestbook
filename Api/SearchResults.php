@@ -30,6 +30,10 @@ class SearchResults extends \Magento\Framework\Api\SearchResults
         if ($this->_arrayTree === null) {
             $this->_arrayTree = [];
             $items = $this->getItems();
+            /**
+             *  Quickfix for https://github.com/encomage/module-guestbook/issues/1
+             */
+             asort($items);
             /** @var \Encomage\GuestBook\Model\GuestBook $item */
             foreach ($items as $item) {
                 if (!$item->getReplyPath()) {

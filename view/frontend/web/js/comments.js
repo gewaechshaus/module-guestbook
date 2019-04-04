@@ -1,5 +1,8 @@
 define([
     'jquery',
+    'mage/template',
+    'jquery/ui',
+    'mage/translate',
     "domReady!"
 ], function ($) {
     'use strict';
